@@ -1,5 +1,13 @@
-.videos.row
-- @video.each do |video|
- .video.col-sm-2
-  = link_to video, nil do
-   %img(src="#{video.small_cover_url}")
+-Category.all.each do |category|
+  %header
+    %h3= link_to "#{category.name}",nil #no route for category yet
+    %br/
+  .videos.row
+    -category.videos.each do |video|
+      .video.col-sm-2
+        = link_to video, nil do
+          %img(src="#{video.small_cover_url}")
+          %br/
+          %br/
+          %br/
+          %br/
