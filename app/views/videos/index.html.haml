@@ -1,6 +1,6 @@
 -Category.all.each do |category|
   %header
-    %h3= link_to "#{category.name}",nil #no route for category yet
+    %h3= link_to "#{category.name}",nil # no route for category yet
     %br/
   .videos.row
     -category.videos.each do |video|
