@@ -26,7 +26,7 @@ describe VideosController do
     end
 
     it "redirects unauthinticated users to sign in page" do
-      futurama = Fabricate(:video, title: 'tealeaf')
+      futurama = Fabricate(:video, title: 'futurama')
       post :search, search_term: 'rama'
       expect(response).to redirect_to sign_in_path
     end
