@@ -31,7 +31,7 @@ describe SessionsController do
       it "sets the notice" do 
         lana = Fabricate(:user)
         post :create, email: lana.email, password: lana.password
-        expect(flash[:success]).not_to be_blank
+        expect(flash[:success]).to be_present
       end
     end
 
@@ -49,10 +49,10 @@ describe SessionsController do
       it "sets the error message" do
         lana = Fabricate(:user)
         post :create, email: lana.email, password: lana.password + "wrong+password" 
-        expect(flash[:danger]).not_to be_blank
+        expect(flash[:danger]).to be_present
       end
-      end
-    end 
+    end
+  end 
 
   describe "GET destroy" do 
 

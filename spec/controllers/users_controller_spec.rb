@@ -20,7 +20,6 @@ describe UsersController do
         expect(response).to redirect_to sign_in_path
       end
     end
-
     context "with invalid input" do
       before do
         post :create, user: {password: "password",full_name: "Keving Wang"}
@@ -40,8 +39,3 @@ describe UsersController do
     end
   end
 end
-
-
-
-  
-
