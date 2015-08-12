@@ -68,6 +68,7 @@ describe QueueItem  do
       queue_item.rating = nil
       expect(Review.first.rating).to be_nil
     end
+    
     it "creates a new review if the review is not present" do
       video = Fabricate(:video)
       user = Fabricate(:user)
